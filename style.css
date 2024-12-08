@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.weather-container {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.weather-info {
+    text-align: center;
+}
+
+.weather-info img {
+    width: 100px;
+    height: 100px;
+    margin: 1rem 0;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+/* 배경 테마 */
+.sunny-bg {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.clear-night-bg {
+    background: linear-gradient(to bottom, #203a43, #2c5364);
+}
+
+.rainy-bg {
+    background: linear-gradient(to bottom, #616161, #9bc5c3);
+}
+
+.cloudy-bg {
+    background: linear-gradient(to bottom, #757f9a, #d7dde8);
+}
+
+.snowy-bg {
+    background: linear-gradient(to bottom, #e6e9f0, #eef1f5);
+}
+
+/* 날씨 정보 카드 스타일 */
+.weather-info {
+    padding: 2rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.weather-main {
+    margin: 1.5rem 0;
+}
+
+.condition {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.temp-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.temp-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.value {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* 날씨별 카드 스타일 */
+.sunny {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(246, 211, 101, 0.3);
+}
+
+.rainy {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(155, 197, 195, 0.3);
+}
+
+.cloudy {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(117, 127, 154, 0.3);
+}
+
+.snowy {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 20px rgba(230, 233, 240, 0.3);
+}
+
+/* 반응형 디자인 개선 */
+@media (max-width: 480px) {
+    .temp-container, .weather-details {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .temp-item, .detail-item {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1rem;
+    }
+}

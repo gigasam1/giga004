@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 정보 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>날씨 정보 검색</h1>
+        <div class="search-container">
+            <input type="date" id="dateInput">
+            <input type="text" id="locationInput" placeholder="도시를 입력하세요">
+            <button onclick="getWeather()">검색</button>
+        </div>
+        <div id="weatherResult" class="weather-container">
+            <div class="weather-info">
+                <!-- 날씨 정보가 여기에 표시됩니다 -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
